@@ -23,6 +23,16 @@ header nav ul {
     align-items: center;
 }
 
+header nav ul.left-menu {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul.right-menu {
+    display: flex;
+    gap: 10px;
+}
+
 header nav ul li {
     position: relative;
 }
@@ -40,6 +50,30 @@ header nav ul li a:hover {
     border-radius: 4px;
 }
 
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
 main {
     padding: 20px;
     max-width: 1200px;
@@ -48,4 +82,3 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-

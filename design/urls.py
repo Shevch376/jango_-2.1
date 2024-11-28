@@ -1,8 +1,10 @@
+from django.contrib import admin
+from django.contrib.auth.views import LogoutView
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('mysite.urls')),  # Главная страница
-    path('accounts/', include('django.contrib.auth.urls')),  # Вход и регистрация
+    path('admin/', admin.site.urls),
+    path('', include('mysite.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/logout/', LogoutView.as_view(), name='logout'),
 ]
-
-

@@ -13,11 +13,11 @@
             <ul class="left-menu">
                 <li><a href="{% url 'home' %}">Главная</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'my_requests' %}">Мои заявки</a></li>
-                    <li><a href="{% url 'create_request' %}">Создать заявку</a></li>
+                    <li><a href="{% url 'my_all_requests' %}">Мои заявки</a></li>
+                    <li><a href="{% url 'create-request' %}">Создать заявку</a></li>
                 {% else %}
                     <li><a href="{% url 'login' %}">Войти</a></li>
-                    <li><a href="{% url 'register' %}">Регистрация</a></li>
+                    <li><a href="{% url 'logins' %}">Регистрация</a></li>
                 {% endif %}
             </ul>
             {% if user.is_authenticated %}
@@ -27,6 +27,9 @@
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Выйти</button>
                     </form>
+                </li>
+                <li>
+                    <a href="{% url 'profile' %}" class="profile-dropdown">Профиль</a>
                 </li>
             </ul>
             {% endif %}

@@ -56,6 +56,14 @@ def logins(request):
 
 
 @staff_member_required
+def manage_categories(request):
+    categories = Category.objects.all()
+    return render(request, 'manage_categories.html', {'categories': categories})
+
+
+
+
+@staff_member_required
 def add_category(request):
     if request.method == 'POST':
         form = CategoryForm(request.POST)
